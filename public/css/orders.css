@@ -1,0 +1,664 @@
+.order-item-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin: auto;
+    width: 40rem;
+    max-width: 90%;
+  }
+
+  .order-item-list h1{
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+  }
+  
+  .order-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  }
+  
+  .order-item h1,
+  .order-item h3 {
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .cancel-order-button {
+    background-color: #03FFA1;
+    cursor: pointer;
+    color: black;
+    border:2px solid black;
+    border-radius: 7px;
+    padding:5px 15px;
+    font-size: 15px;
+    position: absolute;
+    right: 25%;
+  }
+  .show-products-button {
+    background-color: #03FFA1;
+    cursor: pointer;
+    color: black;
+    border:2px solid black;
+    border-radius: 7px;
+    padding:5px 15px;
+    font-size: 15px;
+    position: absolute;
+    right: 2%;
+  }
+
+  .show-products-button.active{
+    background-color: green;
+    cursor: pointer;
+    color: white;
+  }
+
+
+  #nav {
+    position:fixed;
+    background-color: darkcyan;
+    top: 30px;
+    right: 0;
+    height: 100vh;
+    width:max-content;
+    padding: 1rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+#nav.active {
+    transform: translateX(0);
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+body{
+    margin: 0;
+    padding-top: 60px;
+    height:100vh;
+}
+header {
+    text-align: center;
+    margin:20px 0;
+    padding:0px;
+    padding-bottom:30px;
+    background:black;
+    color:white;
+    margin-top: 60px;
+}
+.pagenation {
+    margin-top: 2rem;
+    text-align: center;
+}
+.pagenation button {
+    text-decoration: none;
+    cursor: pointer;
+    color: White;
+    padding: 10px;
+    border: 1px solid;
+    margin: 0 0.5rem;
+}
+
+.pagenation button:hover,
+.pagenation button:active,
+.pagenation button.active{
+    background: #03ffA1;
+    color: white;
+}
+header #cartbtn {
+    background-color: black;
+    cursor: pointer;
+    color: #D3EBE3;
+    border: 2px solid #03ffa1;
+    border-radius: 7px;
+    padding: 10px 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    position: absolute;
+    margin-top: 8px;
+    right: 2%;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 18px;
+}
+header #cartbtn:hover {
+    background-color: #03ffa1;
+    color: black;
+}
+#cartbtn {
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    border:2px solid #56CCF2;
+    border-radius: 7px;
+    padding:2px 10px;
+    position: absolute;
+    right: 2%;
+}
+
+#cartnav {
+    position:fixed;
+    background-color: black;
+    top: 30px;
+    right: 0;
+    height: 100vh;
+    width:max-content;
+    padding: 1rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+#cartnav h2 {
+    background-color: black;
+    margin-top: 20px;
+    color: #D3EBE3;
+}
+#cartnav.active {
+    transform: translateX(0);
+}
+
+
+.toast{
+    background-color: #56CCF2;
+    border-radius: 5px;
+    color: black;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+.toast h4 span{
+    color:rgb(235, 33, 33);
+}
+#cart{
+    position: fixed;
+    height: 95%;
+}
+header h1{
+    padding:40px;
+    font-size:100px;
+    margin-top: 40px;
+    font-family: 'Press Start 2P', system-ui;
+}
+header h1 span.tone {
+    color: #03FFA1; /* Set your desired color for "Tone" */
+}
+
+header h1 span.trove {
+    color: #FFFF; /* Set your desired color for "Trove" */
+}
+header ul{
+    display:flex;
+    padding:10px;
+    font-size:18px;
+    font-weight:200;
+    justify-content: center;
+    list-style-type: none;
+    border-bottom: none;
+    position: fixed;
+    top: 0%;
+    background: black;
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 20px;
+}
+header li{
+    margin:0px 40px;
+    margin-top: 20px;
+}
+header li a{
+    text-decoration: none;
+    color:#D3EBE3;
+}
+header h6{
+    padding:10px;
+    font-size:20px;
+    font-weight: normal;;
+    border-bottom: 0.1rem solid white;
+}
+header h6 a {
+    text-decoration: none;
+    color:white;
+}
+header .latest-album{
+    display:block;
+    border:1px solid #03FFA1;
+    padding:15px 30px;
+    font-size:23px;
+    font-weight: 200;
+    margin:10px auto;
+    background: inherit;
+    cursor: pointer;
+    color:#D3EBE3;
+}
+header .play-btn{
+    cursor: pointer;
+    display:block;
+    border:2px solid #03FFA1;
+    border-radius:50%;
+    padding:20px;
+    font-size:30px;
+    font-weight: 200;
+    margin:20px auto;
+    background: inherit;
+    color:#D3EBE3;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+#tours .tour-item{
+    display:flex;
+    border-bottom:1px solid black;
+    padding:10px;
+}
+#tours .tour-item .tour-date{
+    width:12%;
+}
+#tours .tour-item .tour-place{
+    width:25%;
+    color:#D3EBE3;
+}
+#tours .tour-item .tour-spec-place{
+    width:53%;
+    color:#D3EBE3;
+}
+#tours .tour-item .buy-btn{
+    width:20%;
+    background: #01B873;
+    color:black;
+    border:none;
+    padding:7px;
+    border-radius:5px;
+    font-weight:700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+section h2{
+    font-family: 'Press Start 2P', system-ui;
+    text-align:center;
+    padding:20px;
+    font-size:30px;
+    margin-top: 1px;
+    margin-bottom: 20px;
+}
+section h2 span.live {
+    color: #03FFA1; /* Set your desired color for "Tone" */
+}
+
+section h2 span.events {
+    color: #FFFF; /* Set your desired color for "Trove" */
+}
+.container{
+    max-width:900px;
+    margin:0 auto;
+    padding:20px 30px;
+}
+#music-content{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+.music-container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+#music-content div{
+    margin:30px;
+}
+#music-content div h3{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    color: #03FFA1;
+    margin-bottom: 15px;
+}
+#music-content .prod-details{
+    display: flex;
+    margin: 8px;
+    align-items: center;
+    justify-content: space-between;
+}
+#music-content .shop-item-button{
+    cursor:pointer;
+    padding:8px;
+    color: #D3EBE3;
+    border: 2px solid #03ffa1;
+    font-size:15px;
+    font-weight: bold;
+    border-radius: 7px;
+    background: black;
+}
+#music-content .shop-item-button:hover, #merch-content .shop-item-button:hover{
+    background: #03FFA1;
+    color: black;
+}
+#merch-content{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+#merch-content div{
+    margin:30px;
+}
+#merch-content div h3{
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+#merch-content .prod-details{
+    display:flex;
+    margin:8px;
+    align-items:center;
+    justify-content: space-between;
+}
+#merch-content .shop-item-button{
+    cursor:pointer;
+    padding:8px;
+    color:white;
+    border:none;
+    font-size:15px;
+    font-weight: bold;
+    border-radius: 4%;
+    background: #56CCF2;
+}
+.cart-row{
+    font-size:18px;
+    display:flex;
+}
+.cart-header{
+    font-size:1.2rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.cart-item{
+    width:45%;
+    color: #D3EBE3;
+}
+.cart-img{
+    width:80px;
+    border-radius:8%;
+    margin-right:20px;
+}
+.cart-price{
+    width:20%;
+    color: #D3EBE3;
+}
+.cart-quantity{
+    width:35%;
+    color: #D3EBE3;
+}
+.cart-column{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+.cart-quantity input{
+    width:40px;
+    height:30px;
+    border:1px solid #03FFA1;
+    border-radius:8%;
+    outline:none;
+    text-align:center;
+    margin-right:20px;
+}
+.cart-quantity button{
+    color:black;
+    font-weight: bold;
+    background: #03FFA1;
+    cursor: pointer;
+    border:none;
+    border-radius:8%;
+    height:30px;
+    outline:none;
+    padding: 0px 7px;
+}
+.cart-quantity button:hover{
+    background: rgb(218, 37, 37);;
+}
+.cart-total{
+    display:flex;
+    flex-direction: row-reverse;
+    font-size:1.2rem;
+    margin:20px;
+}
+.cart-total .total-title{
+    margin-right:10px;
+    font-size:1.5rem;
+}
+
+.purchase-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    margin-top: 50px;
+    background: #03FFA1;
+    color:black;
+    font-size:1.2rem;
+    font-weight: bold;
+    border:none;
+    border-radius:8%;
+    padding:12px;
+    cursor: pointer;
+}
+.purchase-btn:hover{
+    background-color:#18acdd;
+}
+footer{
+    display:flex;
+    margin-top:160px;
+    padding:20px;
+    font-family: 'Press Start 2P', system-ui;
+    background: #03FFA1;
+    border-top: 0.1rem solid black;
+    color: white;
+}
+footer h3 span.tone {
+    background-color: #03FFA1;
+    color: black; /* Set your desired color for "Tone" */
+}
+
+footer h3 span.trove {
+    background-color: #03FFA1;
+    color: #FFFF; /* Set your desired color for "Trove" */
+}
+footer .footer-title{
+    text-align: center;
+    color:white;
+    width:50%;
+    font-size:50px;
+    font-weight:bold;
+    margin:0 auto;
+    margin-bottom: 40px;
+    background: none;
+}
+.footer-title h3{
+    background-color:#03FFA1;
+}
+.footer-icons {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: transparent; /* Set the background color to transparent */
+}
+.footer-icons ul{
+    list-style-type: none;
+    display:flex;
+    background-color: transparent;
+}
+.footer-icons li{
+    padding: 10px;
+    margin:0 20px;
+    background-color: transparent !important;
+}
+.footer-icons li:hover{
+    background-color: black !important;
+}
+.footer-icons img{
+    width:30px;
+    height: 30px;
+    background-color: #03ffa1;
+    vertical-align: top;
+    border: none;
+}
+
+/* About */
+#about{
+    max-width:900px;
+    margin:0 auto;
+    font-size: 22px;
+}
+#about h3{
+    text-align: center;
+    font-size:25px;
+    margin:20px;
+}
+/* #about div{
+    display:flex;
+} */
+
+#about img{
+    float:left;
+    margin:20px 50px;
+    border-radius: 50%;
+    width:200px;
+    height:200px;
+}
+
+#about p{
+    font-size:17px;
+    margin:20px;
+    color:#777;
+}
+
+#container{
+    position:fixed;
+    bottom:10px;
+    right:10px;
+}
+.notification {
+    background-color: #56CCF2;
+    border-radius: 5px;
+    color: black;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+.notification h4 span{
+    color:rgb(235, 33, 33);
+}
+
+.image-container{
+    height: 250px;
+    width: 250px;
+    overflow: hidden;
+}
+.prod-images{
+    transform-origin: center center;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    padding:0px;
+    margin:0px;
+    transition: ease-in 0.5s;
+    filter: brightness(100%);
+    border: 3px solid #03ffa1; /* Set your desired border color and width */
+    border-radius: 20px;
+}
+.prod-images:hover{
+    transform: scale(1.5);
+    filter: brightness(130%);
+}
+header ul a{
+    color:#D3EBE3;
+    text-decoration:none;
+    cursor: pointer;
+}
+.fa-shopping-cart{
+    color:white;
+}
+.cart-holder{
+    border:2px solid #56CCF2;
+    border-radius: 7px;;
+    padding:2px 10px;
+    position: absolute;
+    right: 2%;
+}
+.cart-number{
+    position:absolute;
+    color:#56CCF2;
+    font-size: 20px;
+    top:-10px;
+    right:-15px;
+}
+
+@media(max-width:600px){
+    header li{
+        margin:0px 20px;
+    }
+}
+#cart{
+    margin:0px;
+    display: none;
+    position:fixed;
+    top:50px;
+    height: 95%;
+    right:0;
+    background-color:rgb(255, 255, 255);
+    border:1px solid rgb(177, 103, 103);
+    min-height:50vh;
+}
+#cart h2{
+    margin:20px 0px;
+    padding:0;
+}
+
+.cart-btn-bottom{
+    display:flex;
+    padding:15px;
+    background-color: #777;
+    border:none;
+    border-radius:7px;
+    margin:auto;
+    cursor:pointer;
+}
+.cart-bottom{
+    text-decoration: none;
+    color:#56CCF2;
+    font-size: 16px;
+    font-weight:700;
+}
+.cancel{
+    position:absolute;
+    cursor:pointer;
+    color: #D3EBE3;
+    top:0;
+    right:0;
+    margin:20px;
+    background:none;
+    font-size:16px;
+    font-weight: 700;
+    border:1px solid #D3EBE3;
+    border-radius:7px;
+    padding:5px;
+    margin-top: 32px;
+}
